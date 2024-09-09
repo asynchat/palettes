@@ -1,15 +1,20 @@
-import yayJpg from '../assets/yay.jpg';
+import { NGraphXAIChat } from "@/components/chat";
+import { Col, Row } from "antd";
 
 export default function HomePage() {
   return (
     <div>
-      <h2>Yay! Welcome to umi!</h2>
-      <p>
-        <img src={yayJpg} width="388" />
-      </p>
-      <p>
-        To get started, edit <code>pages/index.tsx</code> and save to reload.
-      </p>
+      <Row>
+        <Col flex={"auto"}></Col>
+        <Col flex="30%">
+          <NGraphXAIChat
+            flowId="bd95a15d-e115-40a4-be83-524fd7bc4bfd"
+            resultCallback={(data) => {
+              console.log(data);
+            }}
+          />
+        </Col>
+      </Row>
     </div>
   );
 }

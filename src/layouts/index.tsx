@@ -9,10 +9,11 @@ export default function Layout() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="https://github.com/umijs/umi">Github</a>
+          <a href="https://github.com/asynchat/copilot-app-template">Github</a>
         </li>
       </ul>
       <Outlet />
+      <div className={styles.footer}>@<a href='https://torchdb.com'>torchdb.com</a></div>
     </div>
   );
 }

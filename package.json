@@ -11,6 +11,10 @@
   "dependencies": {
     "@ant-design/icons": "^5.4.0",
     "@microsoft/fetch-event-source": "^2.0.1",
+    "@nlux/highlighter": "^2.17.1",
+    "@nlux/markdown": "^2.17.1",
+    "@nlux/react": "^2.17.1",
+    "@nlux/themes": "^2.17.1",
     "@umijs/max": "^4.3.18",
     "antd": "^5.20.5",
     "lodash": "^4.17.21",

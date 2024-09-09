@@ -1,0 +1,29 @@
+.nlux-AiChat-root {
+  width: 480px;
+  height: calc(100vh - 80px);
+  border: 1px solid #F0F0F0;
+  margin-right: 10px;
+}
+
+.nlux-AiChat-root > .nlux-chatRoom-container > .nlux-composer-container {
+  border-top: 2px solid #fafafa;
+}
+
+.nlux-AiChat-root > .nlux-chatRoom-container {
+  border-radius: 0;
+}
+
+.nlux-conversationStarters-container {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.nlux-AiChat-root
+  > .nlux-chatRoom-container:not(.nlux-chatRoom-starting)
+  > .nlux-conversation-container {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
