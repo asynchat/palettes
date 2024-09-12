@@ -1,3 +1,3 @@
-# copilot-app-template
+# Palettes
 
-<a href="https://torchdb.com">NGraphX</a> intelligent agent application creation scaffolding, suitable for quickly building Copilot applications, allowing ideas to be implemented early.
+<a href="https://torchdb.com">NGraphX</a> Retrieve color palettes using vector models.
