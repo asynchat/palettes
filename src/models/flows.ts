@@ -25,7 +25,7 @@ export default function Page() {
 
   const executePalettesRetrievalFlow = async (msg: any) => {
     executeFlow(
-      "f13ac137-1f88-4945-9cde-cdf6b861ca37",
+      "fa61c7d3-9478-4179-b395-afddacbce2e8",
       {},
       [{ role: "user", content: msg }],
       (data) => {

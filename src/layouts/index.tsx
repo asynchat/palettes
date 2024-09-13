@@ -9,7 +9,7 @@ export default function Layout() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="https://github.com/asynchat/copilot-app-template">Github</a>
+          <a href="https://github.com/asynchat/palettes">Github</a>
         </li>
       </ul>
       <Outlet />
