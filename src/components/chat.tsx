@@ -16,7 +16,8 @@ import { Conf } from "@/misc/conf";
 
 export interface NGraphXAIChatProps {
   flowId: string;
-  resultCallback?: (data: any) => void;
+  onResultCallback?: (data: any) => void;
+  onMessageReceivedCallback?: (content: string) => void;
   params?: any;
   initMessages?: any;
   conversationSize?: number;
@@ -28,7 +29,9 @@ export function NGraphXAIChat(props: NGraphXAIChatProps) {
   const [historyMessages, setHistoryMessages] = useState<any>([]);
   const messageReceivedCallback = useCallback<MessageReceivedCallback>(
     (received: MessageReceivedEventDetails) => {
-      console.log(received, "Chat Received.");
+      if (props.onMessageReceivedCallback) {
+        props.onMessageReceivedCallback(_.join(received.message, ""));
+      }
     },
     []
   );
@@ -52,11 +55,16 @@ export function NGraphXAIChat(props: NGraphXAIChatProps) {
         let msg = event.data.replaceAll("data: ", "");
         msg = msg.replace(/^\s/, "");
         if (msg.startsWith("@__Result__: ")) {
-          if (props.resultCallback) {
-            props.resultCallback(JSON.parse(msg.replace("@__Result__: ", "")));
+          if (props.onResultCallback) {
+            props.onResultCallback(
+              JSON.parse(msg.replace("@__Result__: ", ""))
+            );
           }
         } else {
-          observer.next(event.data);
+          if (msg.length === 0) {
+            msg = "\n\n";
+          }
+          observer.next(msg);
         }
       },
       onerror: (err: any) => {

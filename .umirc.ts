@@ -1,10 +1,10 @@
 import { defineConfig } from "@umijs/max";
 
 export default defineConfig({
-  title: "Template App",
+  title: "Palettes",
   // outputPath: "",
-  base: "/template/", 
-  publicPath: "/template/", // end with '/'
+  base: "/palettes/", 
+  publicPath: "/palettes/", // end with '/'
   routes: [
     { path: "/", component: "index" }
   ],
